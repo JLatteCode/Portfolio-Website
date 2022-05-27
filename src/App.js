@@ -20,6 +20,7 @@ import Skills from "./components/home/Skills";
 // import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
+import MyProject from "./components/home/MyProject.jsx";
 
 import Experience from "./components/home/Experience";
 
@@ -47,29 +48,21 @@ const Home = React.forwardRef((props, ref) => {
           <Experience experiences={experiences}/>
         )
       }
-      {repos.show && (
+      {/* {repos.show && (
         <Project
           heading={repos.heading}
           username={repos.gitHubUsername}
           length={repos.reposLength}
           specfic={repos.specificRepos}
         />
-      )}
-      {leadership.show && (
-        <Leadership
-          heading={leadership.heading}
-          message={leadership.message}
-          img={leadership.images}
-          imageSize={leadership.imageSize}
-        />
-      )}
-      {skills.show && (
-        <Skills
-          heading={skills.heading}
-          hardSkills={skills.hardSkills}
-          softSkills={skills.softSkills}
-        />
-      )}
+      )} */}
+      {
+        
+      }
+     
+
+    <MyProject/>
+     
       
     </>
   );
@@ -84,6 +77,7 @@ const App = () => {
       <Route path="/" exact component={() => <Home ref={titleRef} />} />
       {/* {false && <Route path="/blog" exact component={Blog} />}
       {false && <Route path="/blog/:id" component={BlogPost} />} */}
+      
       <Footer>
         {getInTouch.show && (
           <GetInTouch
